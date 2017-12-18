@@ -1,4 +1,7 @@
+#! /usr/bin/python
 from sys import argv
+if len(argv)!=2:
+	exit("Usage: hasten filename.sql\nHasten - Speed up SQL imports\nExample: hasten file.sql | mysql -uuser -p dbname")
 sql_file = open(argv[1],'r')
 print("""SET SESSION autocommit=0;
 SET SESSION unique_checks=0;
